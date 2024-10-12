@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\moham\\source\\repos\\Sorting Algorithms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B12AC9A7-2C57-4166-AC91-44FA0D8EC9E6}|Sorting Algorithms.vcxproj|C:\\Users\\moham\\source\\repos\\Sorting Algorithms\\Sorting Algorithms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B12AC9A7-2C57-4166-AC91-44FA0D8EC9E6}|Sorting Algorithms.vcxproj|solutionrelative:Sorting Algorithms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sorting Algorithms.cpp",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Sorting Algorithms\\Sorting Algorithms.cpp",
+              "RelativeDocumentMoniker": "Sorting Algorithms.cpp",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Sorting Algorithms\\Sorting Algorithms.cpp",
+              "RelativeToolTip": "Sorting Algorithms.cpp",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAAHMBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-06T15:18:35.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
