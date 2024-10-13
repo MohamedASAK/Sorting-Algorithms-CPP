@@ -14,7 +14,7 @@ node* index = NULL;
 node* Nindex = NULL;
 int listsize = 0;
 int MX = 0;
-
+// Linked List Operations
 void insert(int newdata)
 {
 	current = new node;
@@ -111,7 +111,8 @@ void display()
 		cout << "No Data Found" << endl;
 	}
 }
-
+/* **************************** */
+// Insertion Sort
 void insertion_sort() {
 	if (head != NULL) {
 		current = head->next;
@@ -142,7 +143,7 @@ void insertion_sort() {
 		cout << "No data founded to sort it\n";
 	}
 }
-
+// Selection Sort
 void selection_sort() {
 	if (head != NULL) {
 		current = head->next;
@@ -173,6 +174,7 @@ void selection_sort() {
 		cout << "No data founded to sort it\n";
 	}
 }
+// Bubble Sort
 void bubble_sort() {
 	if (head != NULL) {
 		current = head->next;
@@ -216,7 +218,6 @@ int Max_Number()
 	}
 	return Max_Num;
 }
-
 // Count Sort
 void count_sort()
 {
@@ -247,7 +248,6 @@ void count_sort()
 	}
 
 }
-
 // Redix Sort
 void CountSortRedix(int exp)
 {
@@ -300,15 +300,14 @@ void radix_sort() {
 	for (int Exp = 1; MX / Exp > 0; Exp *= 10)
 		CountSortRedix(Exp);
 }
-
 // Merge Sort
-
 node* indexOfList(node* head, int pos) {
 	node* tmp = head;
 	for (int i = 0; i < pos; ++i)
 		tmp = tmp->next;
 	return tmp;
 }
+void Merge(int*, int, int, int);
 void Merge(node* head, int low, int high, int mid) {
 	int i = low, j = mid + 1, ind = 0;
 	int* tmp = new int[high - low + 1];
@@ -351,31 +350,39 @@ void merge_sort(node* head, int low, int high) {
 void app() {
 	/*
 		op -> operation
+		ins -> insert
 		ath -> add to head
 		dn -> deleted node
 		c -> confirm
 		ao -> another operation
 		s -> starter app
 	*/
-	int op, ath, dn, c, ao, s;
-
-	cout << "--- Welcome to linked list implementation with sorting algorithms---\n";
+	
+	int op, ins, ath, dn, c, ao, s;
+	cout << "---* Welcome to linked list implementation with sorting algorithms *---\n";
 	do {
 		cout << "Choise what do you want\n";
-		cout << "Add to head -> (1)\n";
-		cout << "Delete node -> (2)\n";
-		cout << "Display -> (3)\n";
-		cout << "Destory list -> (4)\n";
-		cout << "Sorting List -> (5)\n";
-		cout << "Exit -> (6)\n";
+		cout << "Insert -> (1)\n";
+		cout << "Add to head -> (2)\n";
+		cout << "Delete node -> (3)\n";
+		cout << "Display -> (4)\n";
+		cout << "Destory list -> (5)\n";
+		cout << "Sorting List -> (6)\n";
+		cout << "Exit -> (7)\n";
 		cin >> op;
 		if (op == 1) {
+			cout << "Enter value do you want to add to head\n";
+			cin >> ins;
+			insert(ins);
+			display();
+		}
+		else if (op == 2) {
 			cout << "Enter value do you want to add to head\n";
 			cin >> ath;
 			AddToHead(ath);
 			display();
 		}
-		else if (op == 2) {
+		else if (op == 3) {
 			display();
 			cout << "Choise the node \n";
 			cin >> dn;
@@ -394,11 +401,11 @@ void app() {
 				cout << "Delete is canceled\n";
 			}
 		}
-		else if (op == 3) {
+		else if (op == 4) {
 			cout << "\nThe Nodes of the Linked List are: \n";
 			display();
 		}
-		else if (op == 4) {
+		else if (op == 5) {
 			display();
 			cout << "\nIF Destroyed the whole list\n \t The result will be: \n";
 			cout << "Are you sure to destroy the whole list\n";
@@ -416,11 +423,49 @@ void app() {
 				cout << "Destroy is canceled\n";
 			}
 		}
-		else if (op == 5)
-		{
-			
-		}
 		else if (op == 6)
+		{
+			cout << "--------Sorting--------\n";
+			cout << "Choise what do you want\n";
+			cout << "Insertion Sort -> (1)\n";
+			cout << "Selection Sort -> (2)\n";
+			cout << "Bubble Sort -> (3)\n";
+			cout << "Count Sort -> (4)\n";
+			cout << "Redix Sort -> (5)\n";
+			cout << "Merge Sort -> (6)\n";
+			cout << "Exit -> (7)\n";
+			cin >> op;
+			if (op == 1) 
+			{
+				insertion_sort();
+			}
+			else if (op == 2)
+			{
+				selection_sort();
+			}
+			else if (op == 3)
+			{
+				bubble_sort();
+			}
+			else if (op == 4)
+			{
+				count_sort();
+			}
+			else if (op == 5)
+			{
+				radix_sort();
+			}
+			else if (op == 6)
+			{
+				merge_sort(head, 0, tail->data);
+			}
+			else if (op == 7)
+			{
+				return;
+			}
+
+		}
+		else if (op == 7)
 		{
 			return;
 		}
